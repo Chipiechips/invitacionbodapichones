@@ -53,23 +53,20 @@
   </style>
 </head>
 <body>
-<!-- Hero Header con imagen y efecto zoom-out -->
+<!-- Hero Header con Parallax y Fade -->
 <style>
   .hero-header {
     position: relative;
     height: 100vh;
-    overflow: hidden;
-  }
-
-  .hero-img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) scale(0.85); /* Zoom out */
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-    z-index: 0;
+    background-image: url('header.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* parallax effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-overlay {
@@ -83,8 +80,6 @@
     position: relative;
     z-index: 2;
     color: white;
-    text-align: center;
-    padding: 2em;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 2s ease forwards;
@@ -99,7 +94,6 @@
 </style>
 
 <div class="hero-header">
-  <img src="header.png" class="hero-img" alt="Header Mariana y Silvino">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1 style="font-family: 'Tangerine', cursive; font-size: 5em; margin: 0;">Mariana & Silvino</h1>
